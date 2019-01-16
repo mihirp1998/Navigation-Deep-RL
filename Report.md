@@ -11,12 +11,10 @@ There is no point in CNNs. Thus we have used a simple four layer feedforward net
 
 The first three layers have been applied relu activation
 
-Parameters used in DQN algorithm:
-
-- Maximum steps per episode: 1000
-- Starting epsilion: 1.0
-- Ending epsilion: 0.01
-- Epsilion decay rate: 0.995
+- Max Steps for training: 1000
+- Epsilion Value (so that at the beginning it is exploring): 1.0
+- Least epsilion value (minimum value so that it doesn't completely exploit): 0.01
+- Decay rate of epsilion (so that exploration changes to exploitation): 0.995
 
 ## Results
 
