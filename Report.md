@@ -30,11 +30,19 @@ Episode 520	Average Score: 13.00
 Environment solved in 420 episodes!	Average Score: 13.00
 ```
 
-## Ideas for future work
+## Future Goals
 
-1. Extensive hyperparameter optimization
-2. Double Deep Q Networks
-3. Prioritized Experience Replay
-4. Dueling Deep Q Networks
-5. RAINBOW Paper
-6. Learning from pixels
+Value Based Learning-->
+
+Extensive hyperparameter optimization
+Double DQNs
+Prioritized Experience Replay
+Dueling Deep Q Networks
+RAINBOW Paper
+Learning from pixels
+
+Policy Based Learning ->
+
+Reinforce algorithm
+PPO 
+Actor Critic Method
