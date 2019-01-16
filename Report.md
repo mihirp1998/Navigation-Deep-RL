@@ -32,7 +32,7 @@ Environment solved in 420 episodes!	Average Score: 13.00
 
 ## Future Goals
 
-Value Based Learning-->
+### Value Based Learning-->
 
 Extensive hyperparameter optimization
 Double DQNs
@@ -41,7 +41,7 @@ Dueling Deep Q Networks
 RAINBOW Paper
 Learning from pixels
 
-Policy Based Learning ->
+### Policy Based Learning ->
 
 Reinforce algorithm
 PPO 
