@@ -1,38 +1,37 @@
 # Project report
 
-## DDPG network architecture
-As the input to the network is simply a 33 dimensional vector which represents the state space and as there is no spatial or temporal relation between it.
-There is no point in CNNs. Thus we have used a simple four layer feedforward network for both the actor and the critic in the ddpg architecture with the following layer details.
+## DQN network architecture
+As the input to the network is simply a 37 dimensional vector and there is no spatial or temporal relation between it.
+There is no point in CNNs. Thus we have used a simple four layer feedforward network with the following layer details.
 
-Actor:
-(FC layer input: 33  Output: 256),
-(FC layer input: 256  Output: 512)
-(FC layer input: 512  Output: action_size)
+(FC layer input: 37  Output: 128),
+(FC layer input: 128  Output: 64)
+(FC layer input: 64  Output: 32)
+(FC layer input: 32  Output: action_size)
 
-Critic:
-(FC layer input: action_size +512  Output: 256),
-(FC layer input: 256  Output: 1)
+The first three layers have been applied relu activation
 
-The first layer of actor has relu and the final layer has tanh
-
-Where as the first layer of Critic has relu, with dropout.
-
-We have used batch normalizer for both actor and critic
-
-
-- Max Steps for training: 2000
+- Max Steps for training: 1000
+- Epsilion Value (so that at the beginning it is exploring): 1.0
+- Least epsilion value (minimum value so that it doesn't completely exploit): 0.01
+- Decay rate of epsilion (so that exploration changes to exploitation): 0.995
 
 ## Results
 
-![results](graph.png)
+![results](download.png)
 
 ```
-
-Environment solved in 1255 episodes! Average Score: 30.01149933
+Episode 100	Average Score: 0.67
+Episode 200	Average Score: 3.88
+Episode 300	Average Score: 6.98
+Episode 400	Average Score: 11.02
+Episode 500	Average Score: 12.54
+Episode 520	Average Score: 13.00
+Environment solved in 420 episodes!	Average Score: 13.00
 ```
 
 ## Future Goals
-## Test the enviornment in every way possible
+
 ### Value Based Learning-->
 
 Extensive hyperparameter optimization
@@ -44,6 +43,6 @@ Learning from pixels
 
 ### Policy Based Learning ->
 
-Tune Hyperparams
-Better trade off between exploration and exploitation
+Reinforce algorithm
 PPO 
+Actor Critic Method
